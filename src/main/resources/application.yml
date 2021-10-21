@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: ecommence-app
+
+  datasource:
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    name: ecomm
+    url: 'jdbc:postgresql://172.18.96.1:5432/ecomm'
+    username: postgres
+    password: Password@1
+    jpa:
+      show-sql: true
+      properties:
+        hibernate:
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+          ddl-auto: none # Hibernate ddl auto (create, create-drop, validate, update)
+
+  # JPA configuration
+  jpa:
+    properties:
+      hibernate:
+        default_schema: ecomm
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    format_sql: true
+    generate-ddl: false
+    hibernate.ddl-auto: none
+
+  # Flyway configuration
+  flyway:
+    schemas: ${spring.datasource.name}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+
+
+# Security configuration
+# Keystore/keys generated using JDK have validity of three months.
+# Before using this code make sure to generate a new keys
+# update these values accordingly.
+app:
+  security:
+    jwt:
+      keystore-location: jwt-keystore.jks
+      keystore-password: Password@1
+      key-alias: jwt-sign-key
+      private-key-passphrase: Password@1

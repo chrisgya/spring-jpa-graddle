@@ -1,0 +1,17 @@
+{
+  "library": "spring-mvc",
+  "dateLibrary": "java8",
+  "hideGenerationTimestamp": true,
+  "modelPackage": "com.chrisgya.springjpagraddle.model",
+  "apiPackage": "com.chrisgya.springjpagraddle",
+  "invokerPackage": "com.chrisgya.springjpagraddle",
+  "serializableModel": true,
+  "useTags": true,
+  "useGzipFeature" : true,
+  "hateoas": true,
+  "withXml": true,
+  "importMappings": {
+    "ResourceSupport":"org.springframework.hateoas.RepresentationModel",
+    "Link": "org.springframework.hateoas.Link"
+  }
+}
