@@ -6,7 +6,7 @@
     %5p [${applicationName},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}]
     [%mdc{env:-null}] [%mdc{tenant:-null}] [%mdc{user:-null}]
     [%mdc{branch:-null}] ${PID:- } --- [%15.15t] %-40.40logger{39} : %msg%n"/>
-    <property name="LOG_DIR" value="${spring-jpa-graddle.service.logging.path:-chapter08-logs}"/>
+    <property name="LOG_DIR" value="${spring-jpa-graddle.service.logging.path:-logs}"/>
     <property name="SERVICE_ENV" value="${service.env:-dev}"/>
     <property name="LOG_BASE_PATH" value="${LOG_DIR}/${SERVICE_ENV}"/>
     <property name="MAX_FILE_SIZE" value="${spring-jpa-graddle.service.logging.rolling.maxFileSize:-100MB}"/>
@@ -17,7 +17,7 @@
         </encoder>
     </appender>
 
-    <root level="error">
+    <root level="info">
         <appender-ref ref="STDOUT"/>
     </root>
 

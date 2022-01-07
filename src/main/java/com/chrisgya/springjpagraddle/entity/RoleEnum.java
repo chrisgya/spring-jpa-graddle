@@ -4,10 +4,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import org.springframework.security.core.GrantedAuthority;
 
-/**
- * @author : github.com/sharmasourabh
- * @project : Chapter06 - Modern API Development with Spring and Spring Boot
- **/
 public enum RoleEnum implements GrantedAuthority {
   USER(Const.USER),
 

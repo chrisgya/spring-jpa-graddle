@@ -57,8 +57,7 @@ public class ShipmentControllerTest {
   public void setup() {
     ObjectMapper mapper = new AppConfig().objectMapper();
     JacksonTester.initFields(this, mapper);
-    MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter = new
-        MappingJackson2HttpMessageConverter();
+    MappingJackson2HttpMessageConverter mappingJackson2HttpMessageConverter = new MappingJackson2HttpMessageConverter();
     mappingJackson2HttpMessageConverter.setObjectMapper(mapper);
     mockMvc = MockMvcBuilders.standaloneSetup(controller)
         .setControllerAdvice(new RestApiErrorHandler(msgSource))

@@ -4,10 +4,6 @@ import javax.persistence.*;
 import java.util.Objects;
 import java.util.UUID;
 
-/**
- * @author : github.com/sharmasourabh
- * @project : Chapter05 - Modern API Development with Spring and Spring Boot
- **/
 @Entity
 @Table(name = "order_item")
 public class OrderItemEntity {

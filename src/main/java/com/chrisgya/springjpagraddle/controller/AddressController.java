@@ -19,7 +19,7 @@ import static org.springframework.http.ResponseEntity.*;
 @RestController
 public class AddressController implements AddressApi {
 
-  private AddressService service;
+  private final AddressService service;
   private final AddressRepresentationModelAssembler assembler;
 
   public AddressController(AddressService addressService, AddressRepresentationModelAssembler assembler) {

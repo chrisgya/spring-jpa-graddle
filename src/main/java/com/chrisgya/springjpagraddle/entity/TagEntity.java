@@ -4,10 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.UUID;
 
-/**
- * @author : github.com/sharmasourabh
- * @project : Chapter06 - Modern API Development with Spring and Spring Boot
- **/
+
 @Entity
 @Table(name = "tag")
 public class TagEntity {

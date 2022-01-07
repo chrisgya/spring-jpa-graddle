@@ -15,4 +15,7 @@ public class Constants {
   public static final String ROLE_CLAIM = "roles";
   public static final String AUTHORITY_PREFIX = "ROLE_";
   public static final String ACTUATOR_URL_PREFIX = "/actuator/**";
+  public static final String SWAGGER_UI_HTML = "/swagger-ui.html/**";
+  public static final String SWAGGER_UI = "/swagger-ui/**";
+  public static final String API_DOCS = "/v3/api-docs/**";
 }

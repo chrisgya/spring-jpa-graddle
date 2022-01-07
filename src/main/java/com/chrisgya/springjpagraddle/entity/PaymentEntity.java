@@ -3,10 +3,7 @@ package com.chrisgya.springjpagraddle.entity;
 import javax.persistence.*;
 import java.util.UUID;
 
-/**
- * @author : github.com/sharmasourabh
- * @project : Chapter06 - Modern API Development with Spring and Spring Boot
- **/
+
 @Entity
 @Table(name = "payment")
 public class PaymentEntity {

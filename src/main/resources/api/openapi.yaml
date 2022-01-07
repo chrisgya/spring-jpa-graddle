@@ -4,12 +4,12 @@ info:
   description: >
     'This is a ***sample ecommerce app API***.  You can find out more about Swagger at [swagger.io](http://swagger.io).
     Description supports markdown markup. For example, you can use the `inline code` using back ticks.'
-  termsOfService: https://github.com/PacktPublishing/Modern-API-Development-with-Spring-and-Spring-Boot/blob/master/LICENSE
+  termsOfService: https://github.com/chrisgya/webflux-r2dbc/blob/master/LICENSE
   contact:
-    email: support@packtpub.com
+    email: chrisgya500@gmail.coms
   license:
     name: MIT
-    url: https://github.com/PacktPublishing/Modern-API-Development-with-Spring-and-Spring-Boot/blob/master/LICENSE
+    url: https://github.com/chrisgya/webflux-r2dbc/blob/master/LICENSE
   version: 1.0.0
 externalDocs:
   description: Any document link you want to generate along with API.

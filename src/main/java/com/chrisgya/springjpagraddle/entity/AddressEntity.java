@@ -4,10 +4,7 @@ import javax.persistence.*;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * @author : github.com/sharmasourabh
- * @project : Chapter06 - Modern API Development with Spring and Spring Boot
- **/
+
 @Entity
 @Table(name = "address")
 public class AddressEntity {

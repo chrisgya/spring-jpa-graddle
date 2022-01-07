@@ -78,13 +78,14 @@ insert into ecomm.product_tag values ('837ab141-399e-4c1f-9abc-bace40296bac', '0
 create TABLE IF NOT EXISTS ecomm.user (
 	id uuid NOT NULL DEFAULT gen_random_uuid(),
 	username varchar(16),
-	password varchar(40),
-	first_name varchar(16),
-	last_name varchar(16),
-	email varchar(24),
-	phone varchar(24),
-	user_status varchar(16),
-	PRIMARY KEY(id)
+    	password varchar(72),
+    	first_name varchar(16),
+    	last_name varchar(16),
+    	email varchar(24),
+    	phone varchar(24),
+    	user_status varchar(16) NOT NULL DEFAULT 'ACTIVE',
+    	role varchar(16) NOT NULL DEFAULT 'ROLE_USER',
+    	PRIMARY KEY(id)
 );
 
 
@@ -216,8 +217,8 @@ create TABLE IF NOT EXISTS ecomm.cart_item (
 		REFERENCES ecomm.item(id)
 );
 
-insert into ecomm.user (id, username, password, first_name, last_name, email, phone, user_status) values('a1b9b31d-e73c-4112-af7c-b68530f38222', 'test', 'pwd', 'Test', 'User', 'test@user.com', '234234234', 'ACTIVE');
-insert into ecomm.user (id, username, password, first_name, last_name, email, phone, user_status) values('a1b9b31d-e73c-4112-af7c-b68530f38223', 'test', 'pwd', 'Test2', 'User2', 'test2@user.com', '234234234', 'ACTIVE');
+insert into ecomm.user (id, username, password, first_name, last_name, email, phone, user_status, role) values('a1b9b31d-e73c-4112-af7c-b68530f38222', 'scott', '{bcrypt}$2a$10$neR0EcYY5./tLVp4litNyuBy/kfrTsqEv8hiyqEKX0TXIQQwC/5Rm', 'Bruce', 'Scott', 'bruce@scott.db', '234234234', 'ACTIVE', 'USER');
+insert into ecomm.user (id, username, password, first_name, last_name, email, phone, user_status, role) values('a1b9b31d-e73c-4112-af7c-b68530f38223', 'scott2', '{bcrypt}$2a$10$neR0EcYY5./tLVp4litNyuBy/kfrTsqEv8hiyqEKX0TXIQQwC/5Rm', 'Bruce', 'Scott', 'bruce2@scott.db', '234234234', 'ACTIVE', 'ADMIN');
 INSERT INTO ecomm.address VALUES ('a731fda1-aaad-42ea-bdbc-a27eeebe2cc0', '9I-999', 'Fraser Suites Le Claridge', 'Champs-Elysees', 'Paris', 'Île-de-France', 'France', '75008');
 insert into ecomm.user_address values ('a1b9b31d-e73c-4112-af7c-b68530f38222', 'a731fda1-aaad-42ea-bdbc-a27eeebe2cc0');
 INSERT INTO ecomm.card VALUES ('618ffaff-cbcd-48d4-8848-a15601e6725b', '999-999-999-999', 'a1b9b31d-e73c-4112-af7c-b68530f38222', 'User', '12/28', '0000');

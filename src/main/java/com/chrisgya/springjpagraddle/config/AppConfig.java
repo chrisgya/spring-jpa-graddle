@@ -27,7 +27,7 @@ public class AppConfig {
     @Bean
     public PasswordEncoder passwordEncoder() {
         // Supports other password encoding, a must for existing applications.
-        // However, uses BCrypt for new passwords. This will allow to use new or future encoders
+        // However, uses BCrypt for new passwords. This will allow using new or future encoders
         Map<String, PasswordEncoder> encoders = Map.of(
                 ENCODER_ID, new BCryptPasswordEncoder(),
                 "pbkdf2", new Pbkdf2PasswordEncoder(),

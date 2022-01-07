@@ -1,5 +1,5 @@
 plugins {
-	id 'org.springframework.boot' version '2.5.6'
+	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id "org.hidetake.swagger.generator" version "2.18.2"
@@ -65,7 +65,7 @@ repositories {
 }
 
 ext {
-	set('testcontainersVersion', "1.16.0")
+	set('testcontainersVersion', "1.16.2")
 }
 
 dependencies {
@@ -75,6 +75,7 @@ dependencies {
 	compileOnly 'org.openapitools:jackson-databind-nullable:0.2.1'
 	implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml'
 	compileOnly 'io.springfox:springfox-oas:3.0.0'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.6.1'
 	// OpenAPI Ends
 
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-resource-server'

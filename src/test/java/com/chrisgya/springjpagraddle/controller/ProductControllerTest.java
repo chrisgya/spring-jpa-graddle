@@ -1,6 +1,5 @@
 package com.chrisgya.springjpagraddle.controller;
 
-import com.chrisgya.springjpagraddle.controller.ProductController;
 import com.chrisgya.springjpagraddle.entity.ProductEntity;
 import com.chrisgya.springjpagraddle.exception.RestApiErrorHandler;
 import com.chrisgya.springjpagraddle.hateoas.ProductRepresentationModelAssembler;

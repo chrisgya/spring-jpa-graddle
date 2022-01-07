@@ -9,10 +9,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * @author : github.com/sharmasourabh
- * @project : Chapter06 - Modern API Development with Spring and Spring Boot
- **/
 @Entity
 @Table(name = "orders")
 public class OrderEntity {
@@ -24,15 +20,15 @@ public class OrderEntity {
   @Column(name = "TOTAL")
   private BigDecimal total;
 
-  @Column(name = "STATUS")
-  @Enumerated(EnumType.STRING)
+  @Enumerated
+  @Column(name = "status")
   private StatusEnum status;
 
-  @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name="CUSTOMER_ID", nullable=false)
   private UserEntity userEntity;
 
-  @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "ADDRESS_ID", referencedColumnName = "ID", insertable=false, updatable=false)
   private AddressEntity addressEntity;
 
@@ -62,6 +58,10 @@ public class OrderEntity {
   @OneToOne(mappedBy = "orderEntity")
   private AuthorizationEntity authorizationEntity;
 
+  public void setTotal(BigDecimal total) {
+    this.total = total;
+  }
+
   public UUID getId() {
     return id;
   }
@@ -73,11 +73,6 @@ public class OrderEntity {
 
   public BigDecimal getTotal() {
     return total;
-  }
-
-  public OrderEntity setTotal(BigDecimal total) {
-    this.total = total;
-    return this;
   }
 
   public StatusEnum getStatus() {

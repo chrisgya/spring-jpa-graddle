@@ -4,10 +4,6 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.UUID;
 
-/**
- * @author : github.com/sharmasourabh
- * @project : Chapter06 - Modern API Development with Spring and Spring Boot
- **/
 @Entity
 @Table(name = "shipment")
 public class ShipmentEntity {
