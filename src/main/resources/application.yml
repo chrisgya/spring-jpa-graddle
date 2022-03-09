@@ -69,5 +69,5 @@ logging:
     com:
       zaxxer:
         hikari: TRACE
-          HikariConfig: DEBUG
+#          HikariConfig: DEBUG
 
